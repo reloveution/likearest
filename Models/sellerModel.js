@@ -2,7 +2,7 @@ import SellerBuilder from "../Builder/sellerBuilder.js"
 
 class SellerModel {
 // дописать конструктор чтобы он в себя принимал все значения
-    constructor(id,) { 
+    constructor(id) { 
         this.id = id
     }
 
