@@ -6,11 +6,13 @@ class SellerArrayBuilder {
     }
 
     build() {
-        console.log(this.jsonData)
+        // console.log(this.jsonData[2])
         let sellerArray = []
         for (let i = 0; i < (this.jsonData.length); i++) {
-            sellerArray[i] =+ new SellerBuilder(this.jsonData[i]).build()
+            sellerArray =+ new SellerBuilder(this.jsonData[i]).build()
+            // console.log(sellerArray[2])
         }
+        console.log(sellerArray)
         return sellerArray;
     }
 }
