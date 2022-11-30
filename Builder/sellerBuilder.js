@@ -1,15 +1,29 @@
-import SellerModel from "../Models/sellerModel.js"
+import { SellerModel } from "../Models/sellerModel.js"
 
-class SellerBuilder {
+class SellerArrayBuilder {
     constructor(jsonData) {
-        this.json = jsonData;
+        this.jsonData = jsonData
     }
 
     build() {
-        console.log(this.json)
-        let sellerModel = new SellerModel(this.json);
+        console.log(this.jsonData)
+        let sellerArray = []
+        for (let i = 0; i < (this.jsonData.length); i++) {
+            sellerArray[i] =+ new SellerBuilder(this.jsonData[i]).build()
+        }
+        return sellerArray;
+    }
+}
+
+class SellerBuilder {
+    constructor(jsonData) {
+        this.jsonData = jsonData
+    }
+
+    build() {
+        let sellerModel = new SellerModel(this.jsonData);
         return sellerModel;
     }
 }
 
-export default SellerBuilder;
+export { SellerBuilder, SellerArrayBuilder }

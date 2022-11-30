@@ -1,17 +1,23 @@
-import SellerBuilder from "../Builder/sellerBuilder.js"
+import { SellerBuilder } from "../Builder/sellerBuilder.js"
+import { SellerArrayBuilder } from "../Builder/sellerBuilder.js";
 
 class SellerModel {
 // дописать конструктор чтобы он в себя принимал все значения
-    constructor(id) { 
-        this.id = id
-    }
+constructor(jsonData) {
+    // console.log(jsonData)
+    this.sellerInfo = jsonData.sellerInfo;
+    this.sellerId = jsonData.sellerId;
+    console.log(this.sellerId)
+}
 
-    static  jsonBuilder(jsonData) {
-        return new SellerBuilder(jsonData);
-    }
+    // static jsonBuilder(jsonData) {
+    //     return new SellerBuilder(jsonData);
+    // }
 
-    // static jsonArrayBuilder(jsonArrayData)
+    static sellerArrayBuilder(jsonArrayData) {
+        return new SellerArrayBuilder(jsonArrayData);
+    }
 
 }
 
-export default  SellerModel;
+export { SellerModel } ;

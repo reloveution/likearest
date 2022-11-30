@@ -1,31 +1,25 @@
 'use strict'
 console.clear()
-import SellerModel from "./Models/sellerModel.js"
+
+import { SellerBuilder } from "./Builder/sellerBuilder.js"
+import { SellerArrayBuilder } from "./Builder/sellerBuilder.js"
+import { SellerModel } from "./Models/sellerModel.js"
 
 import axios from 'axios';
 
-// const axios = require('axios');
 
 
-console.clear()
 
+// axios.get('http://localhost:3000/seller').then(function(response){
+//     // console.log(response)
+//     const sellerArray = response.data;
+//     let sellerModel = SellerModel.jsonBuilder(sellerArray[sellerArray.length-1]).build();
+//     console.log(sellerModel);
+// });
 
-axios({
-    method: 'post',
-    url: 'http://localhost:3000/seller',
-    data: {
-        "sellerInfo": {
-            "firstName": "Valentin",
-            "lastName": "Kurakin",
-            "email": "Valentin@Kurakin.com"
-        }
-    }
-})
-
-axios.get('http://localhost:3000/seller').then(function(response){
-    // console.log(response)
-    const sellerArray = response.data;
-    let sellerModel = SellerModel.jsonBuilder(sellerArray[sellerArray.length-1]).build();
-    // console.log(sellerModel);
+let sellerModel = axios.get('http://localhost:3000/seller').then(function(response){
+    console.log(response.data.length)
+    return SellerModel.sellerArrayBuilder(response.data).build();
 });
 
+console.log(sellerModel)
