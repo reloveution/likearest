@@ -1,9 +1,11 @@
 'use strict'
 console.clear()
-import axios from 'axios';
+
 import { SellerBuilder } from "./Builder/sellerBuilder.js"
 import { SellerArrayBuilder } from "./Builder/sellerBuilder.js"
 import { SellerModel } from "./Models/sellerModel.js"
+
+import axios from 'axios';
 
 // let sellerModel = axios.get('http://localhost:3000/seller').then(response =>{
 //     // console.log(response.data)
