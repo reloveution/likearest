@@ -4,12 +4,12 @@ import { SellerArrayBuilder } from "../Builder/sellerBuilder.js";
 class SellerModel {
 // дописать конструктор чтобы он в себя принимал все значения
 constructor(json) {
-    console.log(json.sellerInfo)
     this.sellerInfo = json.sellerInfo;
     this.sellerId = json.sellerId;
-    console.log(this.sellerId)
+    // console.log(json.sellerId)
+    // console.log(json.sellerInfo)
     // 
-    this.sellersArray = []
+    // this.sellersArray = []
 }
 
     // static jsonBuilder(jsonData) {
@@ -17,6 +17,7 @@ constructor(json) {
     // }
 
     static sellerArrayBuilder(jsonData) {
+        // console.log(jsonData)
         return new SellerArrayBuilder(jsonData);
     }
 

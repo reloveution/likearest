@@ -3,16 +3,16 @@ import { SellerModel } from "../Models/sellerModel.js"
 class SellerArrayBuilder {
     constructor(jsonData) {
         this.jsonData = jsonData
+        // console.log(jsonData)
     }
 
     build() {
-        // console.log(this.jsonData[2])
         let sellerArray = []
         for (let i = 0; i < (this.jsonData.length); i++) {
-            sellerArray =+ new SellerBuilder(this.jsonData[i]).build()
-            // console.log(sellerArray[2])
+            sellerArray[i] = new SellerBuilder(this.jsonData[i]).build()
+            // console.log(this.jsonData[i])
         }
-        console.log(sellerArray)
+        // console.log(sellerArray)/////////////////////
         return sellerArray;
     }
 }
