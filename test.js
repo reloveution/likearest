@@ -29,8 +29,8 @@ let promise2 = promise1.then(response => {
 
 console.log(promise2)
 
-let promise3 = await promise2.then(responce => {
-    return promise2
+let promise3 = promise2.then(response => {
+    return response.resolve
     })
     .catch(error => {
         console.log("Rejected in promise2 " + error)
