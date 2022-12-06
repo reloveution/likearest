@@ -2,111 +2,111 @@
 console.clear()
 import axios from 'axios';
 
-// filling sellers in DB
-axios({
-    method: 'post',
-    url: 'http://localhost:3000/seller',
-    data: {
-        "sellerInfo": {
-            "firstName": "Seller",
-            "lastName": "1",
-            "email": "seller1@seller.com"
-        }
-    }
-})
-console.log('Seller 1 exist in DB')
+// // filling sellers in DB
+// axios({
+//     method: 'post',
+//     url: 'http://localhost:3000/seller',
+//     data: {
+//         "sellerInfo": {
+//             "firstName": "Seller",
+//             "lastName": "1",
+//             "email": "seller1@seller.com"
+//         }
+//     }
+// })
+// console.log('Seller 1 exist in DB')
 
-axios({
-    method: 'post',
-    url: 'http://localhost:3000/seller',
-    data: {
-        "sellerInfo": {
-            "firstName": "Seller",
-            "lastName": "2",
-            "email": "seller2@seller.com"
-        }
-    }
-})
-console.log('Seller 2 exist in DB')
+// axios({
+//     method: 'post',
+//     url: 'http://localhost:3000/seller',
+//     data: {
+//         "sellerInfo": {
+//             "firstName": "Seller",
+//             "lastName": "2",
+//             "email": "seller2@seller.com"
+//         }
+//     }
+// })
+// console.log('Seller 2 exist in DB')
 
-axios({
-    method: 'post',
-    url: 'http://localhost:3000/seller',
-    data: {
-        "sellerInfo": {
-            "firstName": "Seller",
-            "lastName": "3",
-            "email": "seller3@seller.com"
-        }
-    }
-})
-console.log('Seller 3 exist in DB')
+// axios({
+//     method: 'post',
+//     url: 'http://localhost:3000/seller',
+//     data: {
+//         "sellerInfo": {
+//             "firstName": "Seller",
+//             "lastName": "3",
+//             "email": "seller3@seller.com"
+//         }
+//     }
+// })
+// console.log('Seller 3 exist in DB')
 
-axios({
-    method: 'post',
-    url: 'http://localhost:3000/seller',
-    data: {
-        "sellerInfo": {
-            "firstName": "Seller",
-            "lastName": "4",
-            "email": "seller4@seller.com"
-        }
-    }
-})
-console.log('Seller 4 exist in DB')
+// axios({
+//     method: 'post',
+//     url: 'http://localhost:3000/seller',
+//     data: {
+//         "sellerInfo": {
+//             "firstName": "Seller",
+//             "lastName": "4",
+//             "email": "seller4@seller.com"
+//         }
+//     }
+// })
+// console.log('Seller 4 exist in DB')
 
-// filling customers in DB
-axios({
-    method: 'post',
-    url: 'http://localhost:3000/customer',
-    data: {
-        "customerInfo": {
-            "firstName": "Customer",
-            "lastName": "1",
-            "email": "customer1@customer.com"
-        }
-    }
-})
-console.log('Customer 1 exist in DB')
+// // filling customers in DB
+// axios({
+//     method: 'post',
+//     url: 'http://localhost:3000/customer',
+//     data: {
+//         "customerInfo": {
+//             "firstName": "Customer",
+//             "lastName": "1",
+//             "email": "customer1@customer.com"
+//         }
+//     }
+// })
+// console.log('Customer 1 exist in DB')
 
-axios({
-    method: 'post',
-    url: 'http://localhost:3000/customer',
-    data: {
-        "customerInfo": {
-            "firstName": "Customer",
-            "lastName": "2",
-            "email": "customer2@customer.com"
-        }
-    }
-})
-console.log('Customer 2 exist in DB')
+// axios({
+//     method: 'post',
+//     url: 'http://localhost:3000/customer',
+//     data: {
+//         "customerInfo": {
+//             "firstName": "Customer",
+//             "lastName": "2",
+//             "email": "customer2@customer.com"
+//         }
+//     }
+// })
+// console.log('Customer 2 exist in DB')
 
-axios({
-    method: 'post',
-    url: 'http://localhost:3000/customer',
-    data: {
-        "customerInfo": {
-            "firstName": "Customer",
-            "lastName": "3",
-            "email": "customer3@customer.com"
-        }
-    }
-})
-console.log('Customer 3 exist in DB')
+// axios({
+//     method: 'post',
+//     url: 'http://localhost:3000/customer',
+//     data: {
+//         "customerInfo": {
+//             "firstName": "Customer",
+//             "lastName": "3",
+//             "email": "customer3@customer.com"
+//         }
+//     }
+// })
+// console.log('Customer 3 exist in DB')
 
-axios({
-    method: 'post',
-    url: 'http://localhost:3000/customer',
-    data: {
-        "customerInfo": {
-            "firstName": "Customer",
-            "lastName": "4",
-            "email": "customer4@customer.com"
-        }
-    }
-})
-console.log('Customer 4 exist in DB')
+// axios({
+//     method: 'post',
+//     url: 'http://localhost:3000/customer',
+//     data: {
+//         "customerInfo": {
+//             "firstName": "Customer",
+//             "lastName": "4",
+//             "email": "customer4@customer.com"
+//         }
+//     }
+// })
+// console.log('Customer 4 exist in DB')
 
 // filling feedbacks in DB
 // customer 1
@@ -115,8 +115,8 @@ axios({
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "63865ec638fa64bdc3723c36",
-            "sellerId": "63865ec638fa64bdc3723c2e",
+            "customerId": "638f8ee91b851b93e7cb5818",
+            "sellerId": "638f8ee91b851b93e7cb5810",
             "date": "2022-01-01T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 1
@@ -130,8 +130,8 @@ axios({
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "63865ec638fa64bdc3723c36",
-            "sellerId": "63865ec638fa64bdc3723c30",
+            "customerId": "638f8ee91b851b93e7cb5818",
+            "sellerId": "638f8ee91b851b93e7cb5812",
             "date": "2022-01-02T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 2
@@ -145,8 +145,8 @@ axios({
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "63865ec638fa64bdc3723c36",
-            "sellerId": "63865ec638fa64bdc3723c32",
+            "customerId": "638f8ee91b851b93e7cb5818",
+            "sellerId": "638f8ee91b851b93e7cb5814",
             "date": "2022-01-03T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 3
@@ -160,8 +160,8 @@ axios({
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "63865ec638fa64bdc3723c36",
-            "sellerId": "63865ec638fa64bdc3723c34",
+            "customerId": "638f8ee91b851b93e7cb5818",
+            "sellerId": "638f8ee91b851b93e7cb5816",
             "date": "2022-01-04T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 4
@@ -176,8 +176,8 @@ axios({
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "63865ec638fa64bdc3723c38",
-            "sellerId": "63865ec638fa64bdc3723c2e",
+            "customerId": "638f8ee91b851b93e7cb581a",
+            "sellerId": "638f8ee91b851b93e7cb5810",
             "date": "2022-01-05T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 5
@@ -191,8 +191,8 @@ axios({
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "63865ec638fa64bdc3723c38",
-            "sellerId": "63865ec638fa64bdc3723c30",
+            "customerId": "638f8ee91b851b93e7cb581a",
+            "sellerId": "638f8ee91b851b93e7cb5812",
             "date": "2022-01-06T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 6
@@ -206,8 +206,8 @@ axios({
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "63865ec638fa64bdc3723c38",
-            "sellerId": "63865ec638fa64bdc3723c32",
+            "customerId": "638f8ee91b851b93e7cb581a",
+            "sellerId": "638f8ee91b851b93e7cb5814",
             "date": "2022-01-07T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 7
@@ -221,8 +221,8 @@ axios({
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "63865ec638fa64bdc3723c38",
-            "sellerId": "63865ec638fa64bdc3723c34",
+            "customerId": "638f8ee91b851b93e7cb581a",
+            "sellerId": "638f8ee91b851b93e7cb5816",
             "date": "2022-01-08T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 8
@@ -237,8 +237,8 @@ axios({
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "63865ec638fa64bdc3723c3a",
-            "sellerId": "63865ec638fa64bdc3723c2e",
+            "customerId": "638f8ee91b851b93e7cb581c",
+            "sellerId": "638f8ee91b851b93e7cb5810",
             "date": "2022-01-09T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 9
@@ -252,8 +252,8 @@ axios({
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "63865ec638fa64bdc3723c3a",
-            "sellerId": "63865ec638fa64bdc3723c30",
+            "customerId": "638f8ee91b851b93e7cb581c",
+            "sellerId": "638f8ee91b851b93e7cb5812",
             "date": "2022-01-10T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 10
@@ -267,8 +267,8 @@ axios({
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "63865ec638fa64bdc3723c3a",
-            "sellerId": "63865ec638fa64bdc3723c32",
+            "customerId": "638f8ee91b851b93e7cb581c",
+            "sellerId": "638f8ee91b851b93e7cb5814",
             "date": "2022-01-11T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 1
@@ -282,8 +282,8 @@ axios({
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "63865ec638fa64bdc3723c3a",
-            "sellerId": "63865ec638fa64bdc3723c34",
+            "customerId": "638f8ee91b851b93e7cb581c",
+            "sellerId": "638f8ee91b851b93e7cb5816",
             "date": "2022-01-12T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 2
@@ -298,8 +298,8 @@ axios({
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "63865ec638fa64bdc3723c3c",
-            "sellerId": "63865ec638fa64bdc3723c2e",
+            "customerId": "638f8ee91b851b93e7cb581e",
+            "sellerId": "638f8ee91b851b93e7cb5810",
             "date": "2022-01-13T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 3
@@ -313,8 +313,8 @@ axios({
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "63865ec638fa64bdc3723c3c",
-            "sellerId": "63865ec638fa64bdc3723c30",
+            "customerId": "638f8ee91b851b93e7cb581e",
+            "sellerId": "638f8ee91b851b93e7cb5812",
             "date": "2022-01-14T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 4
@@ -328,8 +328,8 @@ axios({
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "63865ec638fa64bdc3723c3c",
-            "sellerId": "63865ec638fa64bdc3723c32",
+            "customerId": "638f8ee91b851b93e7cb581e",
+            "sellerId": "638f8ee91b851b93e7cb5814",
             "date": "2022-01-15T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 5
@@ -343,8 +343,8 @@ axios({
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "63865ec638fa64bdc3723c3c",
-            "sellerId": "63865ec638fa64bdc3723c34",
+            "customerId": "638f8ee91b851b93e7cb581e",
+            "sellerId": "638f8ee91b851b93e7cb5816",
             "date": "2022-01-16T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 6

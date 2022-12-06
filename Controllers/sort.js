@@ -28,31 +28,59 @@ class Sort {
                 console.log(feedbackModel)
                 console.log('----------------')
                 console.log(sellerModel)
-                
-                
-                // for (let i = 0; sellerModel[i].sellerInfo.lastName != sellerLastName; i++) {
-                // }
-                // const sellerID = sellerModel[i].sellerID
-                // console.log(sellerID)
 
 
-                // let feedbacksForSeller = []
-                // for (let i = 0; i < feedbackModel.length; i++) {
-                //     if (feedbackModel[i].feedbackInfo.sellerID == sellerID) {
-                //         feedbacksForSeller.push(feedbackModel[i])
+                let i = 0
+                do {
+                  i++
+                } while (sellerModel[i].sellerInfo == sellerLastName)
+                let sellerID = sellerModel[i].sellerId
+                console.log('-----')
+                console.log(sellerID)
+
+
+                let feedbacksForSeller = []
+                let ii = 0
+                for (i = 0; i < feedbackModel.length; i++) {
+                    console.log('---------------')
+                    console.log(sellerID)
+                    console.log(feedbackModel[i].feedbackInfo.sellerId)
+                    // console.log(feedbackModel[i].feedbackInfo)
+                    if (feedbackModel[i].feedbackInfo.sellerId === sellerID) {
+                        
+                        feedbacksForSeller[ii] = feedbackModel[i]
+                        ii++
+                    }
+                }
+
+                console.log(feedbacksForSeller)
+
+
+                // posts.sort((a, b) => {
+                //     if (a.original_date < b.original_date) {
+                //       return 1;
                 //     }
-                // }
-                // let tempFeedback
-                // for (let ii = 0; ii < (feedbacksForSellers.length - 1); ii++) {
-                //     for (let i = 0; i < (feedbacksForSeller.length - 1); i++) {
-                //         if (Date(feedbacksForSeller[i+1].feedbackInfo.Date) > Date(feedbacksForSeller[i].feedbackInfo.Date)) {
-                //             tempFeedback = feedbacksForSeller[i]
-                //             feedbacksForSeller[i] = feedbacksForSeller[i+1]
-                //             feedbacksForSeller[i+1] = tempFeedback
-                //         }
+                //     if (a.original_date > b.original_date) {
+                //       return -1;
                 //     }
-                // }
-                // console.log(feedbacksForSeller)
+                //     return 0;
+                //   });
+
+
+
+
+                let tempFeedback
+                for (let ii = 0; ii < (feedbacksForSeller.length - 1); ii++) {
+                    for (let i = 0; i < (feedbacksForSeller.length - 1); i++) {
+                        if (Date(feedbacksForSeller[i+1].feedbackInfo.Date) > Date(feedbacksForSeller[i].feedbackInfo.Date)) {
+                            tempFeedback = feedbacksForSeller[i]
+                            feedbacksForSeller[i] = feedbacksForSeller[i+1]
+                            feedbacksForSeller[i+1] = tempFeedback
+                        }
+                    }
+                }
+                console.log('----------------')
+                console.log(feedbacksForSeller)
             })
             .catch(error => {
                 console.log('Error with get feedbacks from DB')
