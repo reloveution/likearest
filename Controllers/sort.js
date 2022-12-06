@@ -107,8 +107,57 @@ class Sort {
         })
         .catch(error => {
             console.log('Error with get sellers from DB')
-        })        
+        })
     }
+// лучший продавец за всё время
+    sort3() {
+        axios.get('http://localhost:3000/seller')
+        .then(response => {
+            const sellerModel = SellerModel.sellerArrayBuilder(response.data).build()
+
+        axios.get('http://localhost:3000/feedback')
+        .then(result => {
+            const feedbackModel = FeedbackModel.feedbackArrayBuilder(result.data).build()
+
+            let sellerArrayWithRate = []
+
+            for (let i = 0; i < sellerModel.length; i++) {
+                sellerArrayWithRate[i] = sellerModel[i]
+                sellerArrayWithRate[i].numberOfReview = 0
+                sellerArrayWithRate[i].totalPoints = 0
+                for(let ii = 0; ii < feedbackModel.length; ii++) {
+                    if (feedbackModel[ii].feedbackInfo.sellerId === sellerArrayWithRate[i].sellerId) {
+                        sellerArrayWithRate[i].numberOfReview++
+                        sellerArrayWithRate[i].totalPoints += feedbackModel[ii].feedbackInfo.rate
+                    }
+                }
+                sellerArrayWithRate[i].fullRate = (sellerArrayWithRate[i].totalPoints / sellerArrayWithRate[i].numberOfReview)*10
+            }
+
+            let tempSellerWitRate
+            for (let ii = 0; ii < (sellerArrayWithRate.length - 1); ii++) {
+                for (let i = 0; i < (sellerArrayWithRate.length - 1); i++) {
+                    if (sellerArrayWithRate[i+1].fullRate > sellerArrayWithRate[i].fullRate) {
+                        tempSellerWitRate = sellerArrayWithRate[i]
+                        sellerArrayWithRate[i] = sellerArrayWithRate[i+1]
+                        sellerArrayWithRate[i+1] = tempSellerWitRate
+                    }
+                }
+            }
+
+            console.log('-----Sort by FullRate------')
+            console.log(sellerArrayWithRate)
+        })
+        .catch(error => {
+            console.log('Error with get feedbacks from DB')
+        })
+        })
+        .catch(error => {
+            console.log('Error with get sellers from DB')
+        })
+        
+    }
+
 
 }
 
