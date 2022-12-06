@@ -18,9 +18,10 @@ import { FeedbackArrayBuilder } from "./Builder/feedbackBuilder.js"
 import { FeedbackModel } from "./Models/feedbackModel.js"
 
 
-
+// the argument is the seller's lastname
 const sortDB = new Sort
 sortDB.sort1(1)
+sortDB.sort2(3)
 
 
 
