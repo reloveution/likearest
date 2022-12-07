@@ -24,6 +24,9 @@ const sortDB = new Sort
 // sortDB.sort2(3)
 sortDB.sort3()
 
+// let sortByRate = sortDB.sort3()
+// console.log(sortDB.sort3)
+
 
 
 

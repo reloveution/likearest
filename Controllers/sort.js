@@ -147,6 +147,7 @@ class Sort {
 
             console.log('-----Sort by FullRate------')
             console.log(sellerArrayWithRate)
+            // return sellerArrayWithRate
         })
         .catch(error => {
             console.log('Error with get feedbacks from DB')
