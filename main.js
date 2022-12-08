@@ -17,23 +17,27 @@ import { FeedbackBuilder } from "./Builder/feedbackBuilder.js"
 import { FeedbackArrayBuilder } from "./Builder/feedbackBuilder.js"
 import { FeedbackModel } from "./Models/feedbackModel.js"
 
+import { BaseApiService } from "./api/rest.js"
+import { SellerApi } from "./api/rest.js"
+
 
 // the argument is the seller's lastname
-const sortDB = new Sort
+// const sortDB = new Sort
 // sortDB.sort1(1)
 // sortDB.sort2(3)
-sortDB.sort3()
+// sortDB.sort3()
 
-// let sortByRate = sortDB.sort3()
-// console.log(sortDB.sort3)
+const sellerApi = new SellerApi
 
+let seller = {
+    "sellerInfo": {
+        "firstName": "Seller",
+        "lastName": "1",
+        "email": "seller1@seller.com"
+    }
+}
 
-
-
-
-
-
-
+sellerApi.post(seller)
 
 
 
