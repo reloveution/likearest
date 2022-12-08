@@ -1,5 +1,9 @@
 import axios from 'axios';
 
+import { SellerBuilder } from "../Builder/sellerBuilder.js"
+import { SellerArrayBuilder } from "../Builder/sellerBuilder.js"
+import { SellerModel } from "../Models/sellerModel.js"
+
 class BaseApiService {
 
     get() {}
@@ -18,28 +22,30 @@ class BaseApiService {
 
 class SellerApi extends BaseApiService {
     
-    constructor() {
-    this.url = 'http://localhost:3000/seller'
-    }
-
-
+    url = 'http://localhost:3000/seller'
 
     get() {
         axios.get(this.url)
         .then(response => {
-            return SellerModel.sellerArrayBuilder(response.data).build()
+            console.log(SellerModel.sellerArrayBuilder(response.data).build())
+            // return SellerModel.sellerArrayBuilder(response.data).build()
         })
         .catch(error => {
             console.log('Error with get sellers by api from DB')
         })
     }
 
-    getDefinite(sellerID) {
+    getDefiniteSeller(sellerID) {
         axios.get(this.url)
         .then(response => {
-            sellerModel = SellerModel.sellerArrayBuilder(response.data).build()
-            for (let i = 0; sellerID != sellerModel[i].sellerId; i++) {}
-            return sellerModel[i]
+            let sellerModel = SellerModel.sellerArrayBuilder(response.data).build()
+            let seller
+            for (let i = 0; i < sellerModel.length; i++) {
+                if (sellerModel[i].sellerId === sellerID) {
+                    seller = sellerModel[i]
+                }
+            }
+            return seller
         })
         .catch(error => {
             console.log('Error with get seller by api from DB')
@@ -56,7 +62,7 @@ class SellerApi extends BaseApiService {
         })
         .then(function (response) {
             // console.log(response)
-            console.log(`---seller _${seller.sellerInfo.firstName} ${seller.sellerInfo.firstName} added to DB---`)
+            console.log(`---seller _${seller.sellerInfo.firstName} ${seller.sellerInfo.lastName} added to DB---`)
         })
         .catch(function (error) {
             console.log(error)

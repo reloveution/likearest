@@ -37,8 +37,10 @@ let seller = {
     }
 }
 
-sellerApi.post(seller)
-
+// sellerApi.post(seller)
+console.log('-------')
+let x = sellerApi.get()
+console.log(x)
 
 
 
