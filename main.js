@@ -17,31 +17,34 @@ import { FeedbackBuilder } from "./Builder/feedbackBuilder.js"
 import { FeedbackArrayBuilder } from "./Builder/feedbackBuilder.js"
 import { FeedbackModel } from "./Models/feedbackModel.js"
 
-import { BaseApiService } from "./api/rest.js"
-import { SellerApi } from "./api/rest.js"
+import { BaseApiService } from "./api/baseApiService.js"
+import { SellerApi } from "./api/sellerApi.js"
+import { FeedbackApi } from "./api/feedbackApi.js"
+
 
 
 // the argument is the seller's lastname
-// const sortDB = new Sort
+const sortDB = new Sort()
 // sortDB.sort1(1)
 // sortDB.sort2(3)
 // sortDB.sort3()
+sortDB.sortFeedbacksForSellerByDate('6392f65672b28d53354785f5', 'des')
+// const sellerApi = new SellerApi
+// const feedbackApi = new FeedbackApi
 
-const sellerApi = new SellerApi
-
-let seller = {
-    "sellerInfo": {
-        "firstName": "Seller",
-        "lastName": "1",
-        "email": "seller1@seller.com"
-    }
-}
-
+// let seller = {
+//     "sellerInfo": {
+//         "firstName": "Seller",
+//         "lastName": "5",
+//         "email": "seller5@seller.com"
+//     }
+// }
 // sellerApi.post(seller)
-console.log('-------')
-let x = sellerApi.get()
-console.log(x)
 
+// console.log('-------')
+// sellerApi.get()
+// console.log('-------')
+// feedbackApi.get()
 
 
 
