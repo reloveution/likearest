@@ -55,58 +55,58 @@ import axios from 'axios';
 // })
 // console.log('Seller 4 exist in DB')
 
-// // filling customers in DB
+// // filling buyers in DB
 // axios({
 //     method: 'post',
-//     url: 'http://localhost:3000/customer',
+//     url: 'http://localhost:3000/buyer',
 //     data: {
-//         "customerInfo": {
-//             "firstName": "Customer",
+//         "buyerInfo": {
+//             "firstName": "Buyer",
 //             "lastName": "1",
-//             "email": "customer1@customer.com"
+//             "email": "buyer1@buyer.com"
 //         }
 //     }
 // })
-// console.log('Customer 1 exist in DB')
+// console.log('Buyer 1 added in DB')
 
 // axios({
 //     method: 'post',
-//     url: 'http://localhost:3000/customer',
+//     url: 'http://localhost:3000/buyer',
 //     data: {
-//         "customerInfo": {
-//             "firstName": "Customer",
+//         "buyerInfo": {
+//             "firstName": "Buyer",
 //             "lastName": "2",
-//             "email": "customer2@customer.com"
+//             "email": "buyer2@buyer.com"
 //         }
 //     }
 // })
-// console.log('Customer 2 exist in DB')
+// console.log('Buyer 2 added in DB')
 
 // axios({
 //     method: 'post',
-//     url: 'http://localhost:3000/customer',
+//     url: 'http://localhost:3000/buyer',
 //     data: {
-//         "customerInfo": {
-//             "firstName": "Customer",
+//         "buyerInfo": {
+//             "firstName": "Buyer",
 //             "lastName": "3",
-//             "email": "customer3@customer.com"
+//             "email": "buyer3@buyer.com"
 //         }
 //     }
 // })
-// console.log('Customer 3 exist in DB')
+// console.log('Buyer 3 added in DB')
 
 // axios({
 //     method: 'post',
-//     url: 'http://localhost:3000/customer',
+//     url: 'http://localhost:3000/buyer',
 //     data: {
-//         "customerInfo": {
-//             "firstName": "Customer",
+//         "buyerInfo": {
+//             "firstName": "Buyer",
 //             "lastName": "4",
-//             "email": "customer4@customer.com"
+//             "email": "buyer4@buyer.com"
 //         }
 //     }
 // })
-// console.log('Customer 4 exist in DB')
+// console.log('Buyer 4 added in DB')
 
 // filling feedbacks in DB
 // customer 1
@@ -115,60 +115,60 @@ axios({
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "6392f65672b28d53354785f7",
-            "sellerId": "6392f65672b28d53354785ef",
+            "buyerId": "63a0a78dc0b7896e9a8339a2",
+            "sellerId": "63a0a78dc0b7896e9a83399a",
             "date": "2022-01-01T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 1
         }
     }
 })
-console.log('Feedback customer 1 for seller 1 added in DB')
+console.log('Feedback buyer 1 for seller 1 added in DB')
 
 axios({
     method: 'post',
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "6392f65672b28d53354785f7",
-            "sellerId": "6392f65672b28d53354785f1",
+            "buyerId": "63a0a78dc0b7896e9a8339a2",
+            "sellerId": "63a0a78dc0b7896e9a83399c",
             "date": "2022-01-02T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 2
         }
     }
 })
-console.log('Feedback customer 1 for seller 2 added in DB')
+console.log('Feedback buyer 1 for seller 2 added in DB')
 
 axios({
     method: 'post',
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "6392f65672b28d53354785f7",
-            "sellerId": "6392f65672b28d53354785f3",
+            "buyerId": "63a0a78dc0b7896e9a8339a2",
+            "sellerId": "63a0a78dc0b7896e9a83399e",
             "date": "2022-01-03T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 3
         }
     }
 })
-console.log('Feedback customer 1 for seller 3 added in DB')
+console.log('Feedback buyer 1 for seller 3 added in DB')
 
 axios({
     method: 'post',
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "6392f65672b28d53354785f7",
-            "sellerId": "6392f65672b28d53354785f5",
+            "buyerId": "63a0a78dc0b7896e9a8339a2",
+            "sellerId": "63a0a78dc0b7896e9a8339a0",
             "date": "2022-01-04T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 4
         }
     }
 })
-console.log('Feedback customer 1 for seller 4 added in DB')
+console.log('Feedback buyer 1 for seller 4 added in DB')
 
 // customer 2
 axios({
@@ -176,60 +176,60 @@ axios({
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "6392f65672b28d53354785f9",
-            "sellerId": "6392f65672b28d53354785ef",
+            "buyerId": "63a0a78dc0b7896e9a8339a4",
+            "sellerId": "63a0a78dc0b7896e9a83399a",
             "date": "2022-01-05T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 5
         }
     }
 })
-console.log('Feedback customer 2 for seller 1 added in DB')
+console.log('Feedback buyer 2 for seller 1 added in DB')
 
 axios({
     method: 'post',
     url: 'http://localhost:3000/feedback',
     data: {
-        "feedbackInfo": {
-            "customerId": "6392f65672b28d53354785f9",
-            "sellerId": "6392f65672b28d53354785f1",
+        "buyerInfo": {
+            "buyerId": "63a0a78dc0b7896e9a8339a4",
+            "sellerId": "63a0a78dc0b7896e9a83399c",
             "date": "2022-01-06T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 6
         }
     }
 })
-console.log('Feedback customer 2 for seller 2 added in DB')
+console.log('Feedback buyer 2 for seller 2 added in DB')
 
 axios({
     method: 'post',
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "6392f65672b28d53354785f9",
-            "sellerId": "6392f65672b28d53354785f3",
+            "buyerId": "63a0a78dc0b7896e9a8339a4",
+            "sellerId": "63a0a78dc0b7896e9a83399e",
             "date": "2022-01-07T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 7
         }
     }
 })
-console.log('Feedback customer 2 for seller 3 added in DB')
+console.log('Feedback buyer 2 for seller 3 added in DB')
 
 axios({
     method: 'post',
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "6392f65672b28d53354785f9",
-            "sellerId": "6392f65672b28d53354785f5",
+            "buyerId": "63a0a78dc0b7896e9a8339a4",
+            "sellerId": "63a0a78dc0b7896e9a8339a0",
             "date": "2022-01-08T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 8
         }
     }
 })
-console.log('Feedback customer 2 for seller 4 added in DB')
+console.log('Feedback buyer 2 for seller 4 added in DB')
 
 // customer 3
 axios({
@@ -237,60 +237,60 @@ axios({
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "6392f65672b28d53354785fb",
-            "sellerId": "6392f65672b28d53354785ef",
+            "buyerId": "63a0a78dc0b7896e9a8339a6",
+            "sellerId": "63a0a78dc0b7896e9a83399a",
             "date": "2022-01-09T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 9
         }
     }
 })
-console.log('Feedback customer 3 for seller 1 added in DB')
+console.log('Feedback buyer 3 for seller 1 added in DB')
 
 axios({
     method: 'post',
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "6392f65672b28d53354785fb",
-            "sellerId": "6392f65672b28d53354785f1",
+            "buyerId": "63a0a78dc0b7896e9a8339a6",
+            "sellerId": "63a0a78dc0b7896e9a83399c",
             "date": "2022-01-10T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 10
         }
     }
 })
-console.log('Feedback customer 3 for seller 2 added in DB')
+console.log('Feedback buyer 3 for seller 2 added in DB')
 
 axios({
     method: 'post',
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "6392f65672b28d53354785fb",
-            "sellerId": "6392f65672b28d53354785f3",
+            "buyerId": "63a0a78dc0b7896e9a8339a6",
+            "sellerId": "63a0a78dc0b7896e9a83399e",
             "date": "2022-01-11T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 1
         }
     }
 })
-console.log('Feedback customer 3 for seller 3 added in DB')
+console.log('Feedback buyer 3 for seller 3 added in DB')
 
 axios({
     method: 'post',
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "6392f65672b28d53354785fb",
-            "sellerId": "6392f65672b28d53354785f5",
+            "buyerId": "63a0a78dc0b7896e9a8339a6",
+            "sellerId": "63a0a78dc0b7896e9a8339a0",
             "date": "2022-01-12T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 2
         }
     }
 })
-console.log('Feedback customer 3 for seller 4 added in DB')
+console.log('Feedback buyer 3 for seller 4 added in DB')
 
 // customer 4
 axios({
@@ -298,7 +298,7 @@ axios({
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "6392f65672b28d53354785fd",
+            "buyerId": "63a0a78dc0b7896e9a8339a8",
             "sellerId": "6392f65672b28d53354785ef",
             "date": "2022-01-13T13:51:50.417-03:00",
             "description": "blahblah",
@@ -306,49 +306,49 @@ axios({
         }
     }
 })
-console.log('Feedback customer 4 for seller 1 added in DB')
+console.log('Feedback buyer 4 for seller 1 added in DB')
 
 axios({
     method: 'post',
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "6392f65672b28d53354785fd",
-            "sellerId": "6392f65672b28d53354785f1",
+            "buyerId": "63a0a78dc0b7896e9a8339a8",
+            "sellerId": "63a0a78dc0b7896e9a83399c",
             "date": "2022-01-14T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 4
         }
     }
 })
-console.log('Feedback customer 4 for seller 2 added in DB')
+console.log('Feedback buyer 4 for seller 2 added in DB')
 
 axios({
     method: 'post',
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "6392f65672b28d53354785fd",
-            "sellerId": "6392f65672b28d53354785f3",
+            "buyerId": "63a0a78dc0b7896e9a8339a8",
+            "sellerId": "63a0a78dc0b7896e9a83399e",
             "date": "2022-01-15T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 5
         }
     }
 })
-console.log('Feedback customer 4 for seller 3 added in DB')
+console.log('Feedback buyer 4 for seller 3 added in DB')
 
 axios({
     method: 'post',
     url: 'http://localhost:3000/feedback',
     data: {
         "feedbackInfo": {
-            "customerId": "6392f65672b28d53354785fd",
-            "sellerId": "6392f65672b28d53354785f5",
+            "buyerId": "63a0a78dc0b7896e9a8339a8",
+            "sellerId": "63a0a78dc0b7896e9a8339a0",
             "date": "2022-01-16T13:51:50.417-03:00",
             "description": "blahblah",
             "rate": 6
         }
     }
 })
-console.log('Feedback customer 4 for seller 4 added in DB')
+console.log('Feedback buyer 4 for seller 4 added in DB')
